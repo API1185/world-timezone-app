@@ -39,7 +39,7 @@
 						<password>2207@Btjqpuse</password>
 						<muleVersion>4.3.0</muleVersion>
 					</cloudHubDeployment>
-				</configuration
+				</configuration>
 			</plugin> 
 		</plugins>
 	</build>
