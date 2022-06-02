@@ -12,9 +12,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="be9134f2-3a0f-44e3-9ba0-2159c1a7706b" basePath="/api/timezone" >
 		<http:request-connection host="worldtimeapi.org" />
 	</http:request-config>
-	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="a81056d9-2de8-43f0-9a41-40faee3c9b50" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
-	</http:listener-config>
 	<flow name="world-demo-apiFlow" doc:id="1f8e5c48-9f6e-418f-b0c7-172af04ac76f" >
 		<http:listener doc:name="Listener" doc:id="afcfcb0d-33c4-4d05-ad04-1c105c8aba34" config-ref="HTTP_Listener_config" path="/{region}/{city}"/>
 		<http:request method="GET" doc:name="Request" doc:id="6abd92e5-0061-464e-9a9a-6155e4839ee1" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
